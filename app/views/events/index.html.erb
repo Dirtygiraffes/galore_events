@@ -1,5 +1,16 @@
 <h1>Events</h1>
 
+<h2>Series</h2>
+<ul>
+  <% series.each do |ser| %>
+    <div>
+      <h3><%= ser['title'] %></h3>
+      <p>About: <%= ser['about'] %></p>
+    </div>
+  <% end %>
+</ul>
+
+<h2>Activities</h2>
 <ul>
   <% activities.each do |activity| %>
     <div>
@@ -8,4 +19,3 @@
     </div>
   <% end %>
 </ul>
-    

@@ -8,7 +8,7 @@ class EventsController < ApplicationController
     response = Net::HTTP.get uri, { 'Api-Key' => api_key }
 
     events = JSON.parse response
-    render 'events/index', locals: { activities: events['activities'] }
+    render 'events/index', locals: { activities: events['activities'], series: events['series'] }
     #render json: eve
   end
 end
